@@ -61,7 +61,7 @@
             </header>
             <!-- Page Content-->
 
-            <section class="pt-4">
+            <!-- <section class="pt-4">
                 <div class="container px-lg-5">
                     <h2 class="fs-2 fw-bold">About</h2>
                     <p class="fs-4">
@@ -72,11 +72,11 @@
                         catalyzing societal transformation through applied AI.
                     </p>
                 </div>
-            </section>
+            </section> -->
 
-            <section class="pt-4">
+            <!-- Page Features-->
+            <!-- <section class="pt-4">
                 <div class="container px-lg-5 text-center">
-                    <!-- Page Features-->
                     <div class="row gx-lg-5 justify-content-md-center">
                         <div class="col-lg-6 col-xxl-4 mb-5">
                             <div class="card bg-light border-0 h-100">
@@ -151,7 +151,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <!-- Back to top button -->
             <button type="button" class="btn btn-secondary btn-floating btn-lg " id="btn-back-to-top">
@@ -197,8 +197,11 @@
                     scale: 1,
                     scaleMobile: 1,
                     spacing: 10,
-                    color: '#e43f2c',
+                    color: 0x009dff, // Start with a blue color
                     backgroundColor: '#112937',
+                    color2: 0xff00ff, // Use pink as the second color
+                    colorMode: 'lerpGradient', // Use lerpGradient mode for rainbow effect
+                    points: 15
                 });
 
                 // Change header colour from black to white
