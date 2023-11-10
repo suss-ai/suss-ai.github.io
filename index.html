@@ -34,7 +34,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="assets/css/styles.css" rel="stylesheet" />
-    <link href="assets/css/wiggle.css" rel="stylesheet" />
     <link href="assets/css/btn_back_to_top.css" rel="stylesheet">
 </head>
 
@@ -53,7 +52,6 @@
                             <a class="btn btn-primary btn-lg my-1" href="http://github.com/suss-ai">Github</a>
                             <a class="btn btn-primary btn-lg my-1"
                                 href="https://suss-vli.github.io/internship">Internship</a>
-                            <a class="btn btn-primary btn-lg my-1" href="http://suss-vli.github.io/faq">FAQ</a>
                             <!-- </div> -->
                         </div>
                     </div>
@@ -163,7 +161,7 @@
         <!-- Footer-->
         <footer id="sticky-footer" class="py-3 bg-dark">
             <div class="container">
-                <p class="m-0 text-center text-white">Copyright &copy; VLI@SUSS 2018 -
+                <p class="m-0 text-center text-white">Copyright &copy; AI For Good @ SUSS
                     <script>document.write(new Date().getFullYear());</script>. v0.1.0.alpha1
                 </p>
             </div>
@@ -177,57 +175,33 @@
 
     <script>
         var typed = new Typed('.typing', {
-            strings: ["Transforming Learning and Changing Destiny", "Building Towards a Brighter and Better Future", "Harnessing the True Power of LLM & AI"],
+            strings: ["Transforming Learning and Changing the World", "Building Towards a Brighter and Better Future", "Harnessing the True Power of LLM & AI"],
             typeSpeed: 120,
             loop: true
         });
-
+    
         document.addEventListener('DOMContentLoaded', () => {
-            const urlParams = new URLSearchParams(window.location.search);
-            const hasXParam = urlParams.has('x');
+            VANTA.NET({
+                el: '#vanta',
+                mouseControls: false,
+                touchControls: false,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                scaleMobile: 1.00,
+                color: '#e43f2c',
+                backgroundColor: '#112937',
+            });
 
-            if (hasXParam) {
-                VANTA.NET({
-                    el: '#vanta',
-                    mouseControls: false,
-                    touchControls: false,
-                    gyroControls: false,
-                    minHeight: 200,
-                    minWidth: 200,
-                    scale: 1,
-                    scaleMobile: 1,
-                    spacing: 10,
-                    color: '#e43f2c',
-                    backgroundColor: '#112937',
-                    points: 15
-                });
-
-                // Change header colour from black to white
-                document.getElementsByTagName('header')[0].classList.add('text-white');
-            }
+            // Change body background color to #112937
+            document.body.style.backgroundColor = '#112937';
+    
+            // Change header colour from black to white
+            document.getElementsByTagName('header')[0].classList.add('text-white');
         });
-
-        window.onload = function () {
-            const urlParams = new URLSearchParams(window.location.search);
-            const hasWhiteWiggle = urlParams.has('1');
-            const hasBlueWiggle = urlParams.has('2');
-
-
-            if (hasWhiteWiggle) {
-                var element = document.querySelectorAll('i');
-                for (var i = 0; i < element.length; i++) {
-                    element[i].classList.add('wiggle');
-                }
-            }
-            else if (hasBlueWiggle) {
-                var element = document.getElementsByClassName('feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4');
-                for (var i = 0; i < element.length; i++) {
-                    element[i].classList.add('wiggle');
-                }
-
-            }
-        };
     </script>
+    
 </body>
 
 </html>
