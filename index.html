@@ -75,7 +75,7 @@
                     <div class="p-4 p-lg-5 rounded-3 text-center">
                         <div class="m-4 m-lg-5">
                             <h1 class="display-1 fw-bold">AI For Good @ SUSS</h1>
-                            <p class="fs-1"><span class="typing"></span></p>
+                            <p class="fs-1">AI for <span class="typing"></span></p>
                             <!-- <div class="d-grid gap-2 d-md-block"> -->
                             <a class="btn btn-primary btn-lg my-1" href="http://github.com/suss-ai">Github</a>
                             <a class="btn btn-primary btn-lg my-1"
@@ -264,9 +264,10 @@
 
     <script>
         var typed = new Typed('.typing', {
-            strings: ["Transforming Learning and Changing the World", "Building Towards a Brighter and Better Future", "Harnessing the True Power of LLM & AI"],
+            strings: ["<mark>Social</mark> Good", "<mark>Education</mark> Good", "<mark>Learning</mark> Good"],
             typeSpeed: 120,
-            loop: true
+            loop: true,
+            contentType: 'html'
         });
 
         document.addEventListener('DOMContentLoaded', () => {
