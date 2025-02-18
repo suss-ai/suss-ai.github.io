@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="auto">
 
 <head>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
@@ -53,13 +53,15 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="assets/css/styles.css" rel="stylesheet" />
     <link href="assets/css/btn_back_to_top.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
         body,
         html {
             height: 100%;
             margin: 0;
-            color: white;
+            color: black;
         }
 
         #vanta {
@@ -81,54 +83,143 @@
             -webkit-box-decoration-break: clone;
             display: inline;
         }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        .b-example-divider {
+            width: 100%;
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+        .btn-bd-primary {
+            --bd-violet-bg: #712cf9;
+            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+            --bs-btn-font-weight: 600;
+            --bs-btn-color: var(--bs-white);
+            --bs-btn-bg: var(--bd-violet-bg);
+            --bs-btn-border-color: var(--bd-violet-bg);
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-hover-bg: #6528e0;
+            --bs-btn-hover-border-color: #6528e0;
+            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+            --bs-btn-active-color: var(--bs-btn-hover-color);
+            --bs-btn-active-bg: #5a23c8;
+            --bs-btn-active-border-color: #5a23c8;
+        }
+        .bd-mode-toggle {
+            z-index: 1500;
+        }
+        .bd-mode-toggle .dropdown-menu .active .bi {
+            display: block !important;
+        }
     </style>
 </head>
 
 <body>
-    <div class="outer">
-        <main class="content">
+    <nav class="navbar navbar-expand-md bg-dark sticky-top" data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand d-md-none" href="#">
+                <svg class="bi" width="24" height="24">
+                    <use xlink:href="#aperture" />
+                </svg>
+                AI for Good @ SUSS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+                aria-controls="offcanvas" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasLabel">AI for Good @ SUSS</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav flex-grow-1 justify-content-between">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">AI for Good @ SUSS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="http://github.com/suss-ai">GitHub</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://suss-vli.github.io/internship">Internship</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://suss-vli.github.io/">Virtual Lab</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://learningservices.suss.edu.sg/">Learning
+                                Services</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <main>
 
-            <!-- Header-->
-            <header class="py-5" id="vanta" style="min-height: 576px;">
-                <div class="container px-lg-5">
-                    <div class="p-4 p-lg-5 rounded-3 text-center">
-                        <div class="m-4 m-lg-5">
-                            <h1 class="display-1 fw-bold">AI for <span class="typing"></span><span> Good @
-                                    SUSS</span></h1>
-                            <!-- <div class="d-grid gap-2 d-md-block"> -->
-                            <a class="btn btn-primary btn-lg my-1" href="http://github.com/suss-ai">Github</a>
-                            <a class="btn btn-primary btn-lg my-1"
-                                href="https://suss-vli.github.io/internship">Internship</a>
-                            <a class="btn btn-primary btn-lg my-1" href="https://suss-vli.github.io/">Virtual Lab</a>
-                            <a class="btn btn-danger btn-lg  my-1" href="https://learningservices.suss.edu.sg/">Learning
-                                Services</a>
-                            <!-- </div> -->
-                        </div>
+        <!-- Header-->
+        <header class="py-5" id="vanta" style="min-height: 576px;">
+            <div class="container px-lg-5">
+                <div class="p-4 p-lg-5 rounded-3 text-center">
+                    <div class="m-4 m-lg-5">
+                        <h1 class="display-1 fw-bold">AI for <span class="typing"></span><span> Good @
+                                SUSS</span></h1>
                     </div>
                 </div>
-            </header>
-            <!-- Page Content-->
+            </div>
+        </header>
+        <!-- Page Content-->
 
-            <!-- New Section: What we do -->
-            <section class="py-4">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <!-- Header on the left -->
-                        <div class="col-lg-6">
-                            <h2 class="fs-2 fw-bold">What We Do</h2>
-                            <p>
-                                AI for Good is a tech initiative aimed at using AI to enhance education, support
-                                lifelong learning, and drive social impact by optimizing educational processes,
-                                strengthening university missions, and fostering a culture of continuous improvement.
-                            </p>
+        <!-- New Section: What we do -->
+        <section class="py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Header on the left -->
+                    <div class="col-lg-6">
+                        <h2 class="fs-2 fw-bold" id="whatwedo">What We Do</h2>
+                        <p>
+                            AI for Good is a tech initiative aimed at using AI to enhance education, support
+                            lifelong learning, and drive social impact by optimizing educational processes,
+                            strengthening university missions, and fostering a culture of continuous improvement.
+                        </p>
 
-                            <h2 class="fs-2 fw-bold">Our Mission</h2>
-                            <p>
-                                Our mission is to harness the power of AI to transform education, promote lifelong
-                                learning, and empower communities, creating a lasting social impact within and beyond
-                                SUSS.
-                            </p>
-                        </div>
+                        <h2 class="fs-2 fw-bold" id="mission">Our Mission</h2>
+                        <p>
+                            Our mission is to harness the power of AI to transform education, promote lifelong
+                            learning, and empower communities, creating a lasting social impact within and beyond
+                            SUSS.
+                        </p>
+                    </div>
 
                         <!-- Icons grid on the right -->
                         <div class="col-lg-6 mt-4 mt-lg-0">
@@ -139,17 +230,17 @@
                                     <p class="fs-6">Small / Large Everything Model Research</p>
                                 </div>
 
-                                <!-- Icon 2 -->
-                                <div class="col-6 col-md-4 mb-4">
-                                    <i class="bi bi-book fs-3"></i>
-                                    <p class="fs-6">Open Educational Resources</p>
-                                </div>
+                            <!-- Icon 2 -->
+                            <div class="col-6 col-md-4 mb-4">
+                                <i class="bi bi-book fs-3"></i>
+                                <p class="fs-6">Open Educational Resources</p>
+                            </div>
 
-                                <!-- Icon 3 -->
-                                <div class="col-6 col-md-4 mb-4">
-                                    <i class="bi bi-puzzle fs-3"></i>
-                                    <p class="fs-6">Retrieval Augmented Generation</p>
-                                </div>
+                            <!-- Icon 3 -->
+                            <div class="col-6 col-md-4 mb-4">
+                                <i class="bi bi-puzzle fs-3"></i>
+                                <p class="fs-6">Retrieval Augmented Generation</p>
+                            </div>
 
                                 <!-- Icon 4 -->
                                 <div class="col-6 col-md-4 mb-4">
@@ -174,7 +265,7 @@
                 </div>
             </section>
 
-            <!-- <section class="pt-4">
+        <!-- <section class="pt-4">
                 <div class="container px-lg-5">
                     <h2 class="fs-2 fw-bold">About</h2>
                     <p class="fs-4">
@@ -187,8 +278,8 @@
                 </div>
             </section> -->
 
-            <!-- Page Features-->
-            <!-- <section class="pt-4">
+        <!-- Page Features-->
+        <!-- <section class="pt-4">
                 <div class="container px-lg-5 text-center">
                     <div class="row gx-lg-5 justify-content-md-center">
                         <div class="col-lg-6 col-xxl-4 mb-5">
@@ -266,22 +357,58 @@
                 </div>
             </section> -->
 
-            <!-- Back to top button -->
-            <button type="button" class="btn btn-secondary btn-floating btn-lg " id="btn-back-to-top">
-                <span class="bi bi-arrow-up"></span>
-            </button>
+        <!-- Back to top button -->
+        <button type="button" class="btn btn-secondary btn-floating btn-lg " id="btn-back-to-top">
+            <span class="bi bi-arrow-up"></span>
+        </button>
 
-        </main>
+    </main>
 
-        <!-- Footer-->
-        <footer id="sticky-footer" class="py-3 bg-dark">
-            <div class="container">
-                <p class="m-0 text-center text-white">Copyright &copy; AI For Good @ SUSS 2022 -
-                    <script>document.write(new Date().getFullYear());</script>. v0.1.0.alpha1
-                </p>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <div class="row text-white">
+                <div class="col-6 col-md">
+                    <h5>AI for Good @ SUSS</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="link-secondary text-decoration-none" href="#whatwedo">What We Do</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="#mission">Our Mission</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5><br></h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="link-secondary text-decoration-none" href="#products">Products and Services</a>
+                        </li>
+                        <li><a class="link-secondary text-decoration-none" href="https://github.com/suss-ai">GitHub</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="https://susss-vli.github.io/internship.html">Internship</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Others</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="link-secondary text-decoration-none" href="https://suss-vli.github.io/faq/">FAQ</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="https://suss-vli.github.io/index.html">VLI @ SUSS</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="https://learningservices.suss.edu.sg/">Learning Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img"
+                    viewBox="0 0 24 24">
+                    <title>Product</title>
+                    <circle cx="12" cy="12" r="10" />
+                    <path
+                        d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
+                </svg> -->
+                    <p class="d-block mb-3 text-white">Copyright &copy; VLI@SUSS 2018 -
+                        <script>document.write(new Date().getFullYear());</script>. v0.1.0.alpha1
+                    </p>
+                </div>
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
 
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -372,9 +499,6 @@
                     });
                     break;
             }
-
-            // Change body background color to #112937
-            document.body.style.backgroundColor = '#112937';
 
             // Change header colour from black to white
             document.getElementsByTagName('header')[0].classList.add('text-white');
